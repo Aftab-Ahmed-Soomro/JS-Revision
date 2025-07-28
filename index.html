@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Revision</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Counter App -->
+    <div class="main">
+      <div class="container">
+        <h1>Counter App</h1>
+        <div id="counter">0</div>
+        <div>
+          <button id="increase">Increase</button>
+          <button id="decrease">Decrease</button>
+          <button id="reset">Reset</button>
+        </div>
+      </div>
+
+      <!-- Color Changer App -->
+      <div class="container">
+        <h1>Color Changer App</h1>
+        <button id="colorBtn">Change Color</button>
+        <p id="colorCode"></p>
+      </div>
+      
+      <!-- To-Do List App -->
+      <div class="container">
+        <h1>Simple To-Do List App</h1>
+        <input type="text" id="todoInput" placeholder="Add a new task">
+        <button id="todoBtn">Add</button>
+        <ul id="todoDisplay"></ul>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
