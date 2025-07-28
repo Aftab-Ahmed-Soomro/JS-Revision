@@ -81,3 +81,33 @@ todoDisplay.addEventListener("click", (event) => {
   }
   
 })
+
+// Form Validation
+
+const form = document.getElementById("contactForm")
+
+form.addEventListener("submit", function(event) {
+  event.preventDefault()
+
+  const userName = document.getElementById("name").value.trim()
+  const email = document.getElementById("email").value.trim()
+  const message = document.getElementById("message").value.trim()
+
+  if (userName === '' || email == '' || message == '') {
+    alert("Please fill all the fields")
+    return
+  }
+
+  if (!validateEmail(email)) {
+    alert("please enter a valid email")
+    return
+  }
+
+  alert("Form Sent Successfully")
+  form.reset(); // Clear the form
+
+})
+
+function validateEmail (email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+}
